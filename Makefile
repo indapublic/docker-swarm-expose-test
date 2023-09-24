@@ -11,4 +11,4 @@ publish:
 	docker image rm docker-swarm-expose-test
 
 deploy:
-	docker stack deploy --with-registry-auth -c ./stack.yaml docker-swarm-expose-test
+	docker stack deploy --with-registry-auth -c stack.yaml docker-swarm-expose-test
