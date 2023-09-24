@@ -9,3 +9,6 @@ publish:
 	docker push indapublic/docker-swarm-expose-test:$(RUN_ARGS) && \
 	docker image rm indapublic/docker-swarm-expose-test:$(RUN_ARGS) && \
 	docker image rm docker-swarm-expose-test
+
+deploy:
+	docker stack deploy --with-registry-auth -c stack.yaml docker-swarm-expose-test
